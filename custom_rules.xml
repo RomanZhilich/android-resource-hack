@@ -8,7 +8,7 @@
                 <filterchain>
                     <tokenfilter>
                         <replaceregex
-                                pattern="(\w+) int (\w)\s*=\s*0x([0-9-a-f]{8});"
+                                pattern="(\w+) int (\w+)\s*=\s*0x([0-9-a-f]{8});"
                                 replace="\1 int \2 = Integer.valueOf(0x\3);"/>
                     </tokenfilter>
                 </filterchain>
