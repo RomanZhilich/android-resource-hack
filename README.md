@@ -4,6 +4,12 @@ android-resource-hack
 This is an example of how you can change string resource value at runtime, not that it's a good thing to do.
 For now will only work with ant builds.
 
+To run the example:
+1) cd to project folder.
+2) run "android update project -p ."
+3) run "ant clean debug" to build debug apk.
+4) run "ant installd" to install debug apk on device or emulator.
+
 Disclaimer
 ==========
 
