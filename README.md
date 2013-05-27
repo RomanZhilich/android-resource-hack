@@ -12,7 +12,7 @@ To run the example:<br/>
 Disclaimer
 ==========
 
-This is made just for fun, you should never implement this in real projects.
+This was made just for fun and should never be implement in real projects.
 
 License
 =======
