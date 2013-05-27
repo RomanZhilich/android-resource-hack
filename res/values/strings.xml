@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Resource Hack</string>
+
+    <string name="before">Before: %1$s</string>
+    <string name="after">After: %1$s</string>
+
+    <string name="initial_value">I\'m perfectly safe.</string>
+    <string name="evil_value">No you\'re not!</string>
+</resources>

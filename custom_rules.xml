@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <macrodef name="apply-dirty-integer">
+        <attribute name="source"/>
+        <sequential>
+            <copy overwrite="true" file="@{source}" tofile="@{source}.tmp">
+                <filterchain>
+                    <tokenfilter>
+                        <replaceregex
+                                pattern="(\w+) int (\w)\s*=\s*0x([0-9-a-f]{8});"
+                                replace="\1 int \2 = Integer.valueOf(0x\3);"/>
+                    </tokenfilter>
+                </filterchain>
+            </copy>
+            <move file="@{source}.tmp" tofile="@{source}"/>
+        </sequential>
+    </macrodef>
+
+    <!-- Basically changes resource definition
+    from:
+        public static final int field = xxxxxxxx;
+    to
+        public static final int field = Integer.valueOf(xxxxxxxx);
+    -->
+    <target name="-pre-compile">
+        <apply-dirty-integer source="gen/tk/dweller/resourcehack/R.java"/>
+    </target>
+</project>
